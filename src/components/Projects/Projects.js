@@ -26,33 +26,39 @@ const Projects = () => (
     <SectionTitle main>Projects</SectionTitle>
     <GridContainer>
       {projects.map((p, i) => {
-        return (
-          <BlogCard key={i}>
-            <Img src={p.image} />
-            <TitleContent>
-              <HeaderThree title>{p.title}</HeaderThree>
-              <Hr />
-            </TitleContent>
-            <CardInfo className="card-info">{p.description}</CardInfo>
-            <div>
-              <TitleContent>Stack</TitleContent>
-              <TagList>
-                {p.tags.map((t, i) => {
-                  return <Tag key={i}>{t}</Tag>;
-                })}
-              </TagList>
-            </div>
-            <UtilityList>
-              <ExternalLinks target="_blank" href={p.visit}>
-                Visit
-              </ExternalLinks>
-              <ExternalLinks target="_blank" href={p.source}>
-                Source
-              </ExternalLinks>
-            </UtilityList>
-          </BlogCard>
-        );
+        if (i < 2) {
+          return (
+            <React.Fragment key={i}>
+              <BlogCard key={i}>
+                <Img src={p.image} />
+                <TitleContent>
+                  <HeaderThree title>{p.title}</HeaderThree>
+                  <Hr />
+                </TitleContent>
+                <CardInfo className="card-info">{p.description}</CardInfo>
+                <div>
+                  <TitleContent>Stack</TitleContent>
+                  <TagList>
+                    {p.tags.map((t, i) => {
+                      return <Tag key={i}>{t}</Tag>;
+                    })}
+                  </TagList>
+                </div>
+                <UtilityList>
+                  <ExternalLinks target="_blank" href={p.visit}>
+                    Visit
+                  </ExternalLinks>
+                  <ExternalLinks target="_blank" href={p.source}>
+                    Source
+                  </ExternalLinks>
+                </UtilityList>
+              </BlogCard>
+            </React.Fragment>
+          )
+        } return null;
+
       })}
+      
     </GridContainer>
   </Section>
 );
