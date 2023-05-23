@@ -1,8 +1,4 @@
 # Portfolio Website
-## Photo
-
-![Screenshot-628.png](https://i.postimg.cc/3w3qHrHC/Screenshot-628.png)
-
 
 ## Tech Stack
 
