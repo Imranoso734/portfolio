@@ -19,7 +19,8 @@ const Header = () => (
         href="/"
         style={{ display: "flex", alignItems: "center", color: "white" }}>
 
-        <DiCssdeck size="3rem" /> <span>Portfolio</span>
+        {/* <DiCssdeck size="3rem" /> <span>Portfolio</span> */}
+        <img src="/logo-white.png" alt="logo" />
 
       </Link>
     </Div1>
